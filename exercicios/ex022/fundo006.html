@@ -8,18 +8,28 @@
     <style>
         body {
             height: 100vh; /*100% da altura do viewport*/
+            
+            /*
             background: black;
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center center;
-            background-repeat: repeat-y;
-            background-size: cover; /* Ele vai adaptar a imagem ao tamanho da viewport*/
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-attachment: fixed;
+            */
+            
 
-            /* dá pra configurar utiliando size container, tamanho fixo em pixel ou %, auto ou cover */
+            /* Shorthand - background 
+                color > image > position > repeat > (size) > attachment           
+                * o size não funciona ainda, é necessário tirar da shorthand
+            */
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover ;
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
